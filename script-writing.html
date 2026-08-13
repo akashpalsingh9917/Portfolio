@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Script Writing | Akash Pal Singh</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#0a0a0a;
+      --card:#111;
+      --accent:#00D1FF;
+      --muted:#ccc;
+      --header:#1A242F;
+    }
+    body{ background-color:var(--bg); color:#fff; font-family: 'Segoe UI', sans-serif; }
+    header{ background-color:var(--header); color:#fff; padding:32px 0; text-align:center; }
+    header h1{ margin:0; font-size:2rem; letter-spacing:0.4px; }
+
+    .container-main{ padding:40px 15px 80px; }
+
+    /* gallery grid */
+    .video-card{
+      background:var(--card);
+      border-radius:12px;
+      padding:12px;
+      transition:transform .25s, box-shadow .25s;
+      overflow:hidden;
+      height:100%;
+      display:flex;
+      flex-direction:column;
+    }
+    .video-card:hover{ transform:translateY(-6px); box-shadow:0 8px 30px rgba(0,0,0,0.6); }
+
+    .thumb{
+      width:100%;
+      aspect-ratio: 16 / 9;
+      object-fit:cover;
+      border-radius:8px;
+      cursor:pointer;
+      display:block;
+      border:2px solid transparent;
+    }
+    .video-info{ padding:12px 6px 0; flex:1; display:flex; flex-direction:column; }
+    .video-title{ font-weight:600; margin:0 0 6px; font-size:1.05rem; color:#fff; }
+    .video-desc{ color:var(--muted); font-size:.95rem; margin-bottom:12px; flex:1; }
+    .card-actions{ display:flex; gap:10px; align-items:center; }
+
+    .open-btn{
+      background:#007bff;border:none;padding:8px 14px;border-radius:8px;color:#fff;text-decoration:none;
+    }
+    .open-btn:hover{ background:#0056b3; color:#fff; }
+
+    .tag{ font-size:.82rem; padding:6px 8px; border-radius:999px; background:rgba(255,255,255,0.03); color:var(--muted); border:1px solid rgba(255,255,255,0.03); }
+
+    footer{ text-align:center; color:var(--muted); padding:40px 0 20px; }
+
+    @media(min-width:768px){
+      .grid-col{ display:grid; grid-template-columns:repeat(2,1fr); gap:18px; }
+    }
+    @media(min-width:992px){
+      .grid-col{ grid-template-columns:repeat(3,1fr); }
+    }
+    @media(min-width:1200px){
+      .grid-col{ grid-template-columns:repeat(4,1fr); }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Script Writing — My Video Scripts</h1>
+  </header>
+
+  <div class="container container-main">
+    <!-- Video grid -->
+    <div id="gallery" class="grid-col">
+
+      <!-- Example video card -->
+      <div class="video-card">
+        <img class="thumb" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwXPw0zjT0td6rTm9Iv8CuOC1bfTBUvptJFg&s" alt="Video 1" data-link="https://www.instagram.com/reel/DKmZL40Jb46/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" />
+        <div class="video-info">
+          <div class="video-title">Ad Campaign Script — Drinkoo</div>
+          <div class="video-desc">Creative ad script for Drinkoo for personal brand targeting youth audience.</div>
+          <div class="card-actions">
+            <span class="tag">Personal Brand Script</span>
+            <div class="ms-auto">
+              <a class="open-btn" href="https://www.instagram.com/reel/DKmZL40Jb46/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank" rel="noopener">View Video</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Add more video cards here -->
+      <!-- 2 -->
+      <div class="video-card">
+        <img class="thumb" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJKuxLO49YNbKRrTqgfQQPmDiJEqLhB5jIMQ&s" alt="Video 2" data-link="https://www.instagram.com/reel/DJwU78uJgoL/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" />
+        <div class="video-info">
+          <div class="video-title">Ad Campaign Script — Drinkoo</div>
+          <div class="video-desc">Short video script for Instagram ads.</div>
+          <div class="card-actions">
+            <span class="tag">Social Media</span>
+            <div class="ms-auto">
+              <a class="open-btn" href="https://www.instagram.com/reel/DJwU78uJgoL/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank" rel="noopener">View Video</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+            <!-- Add more video cards here -->
+      <!-- 2 -->
+      <div class="video-card">
+        <img class="thumb" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJKuxLO49YNbKRrTqgfQQPmDiJEqLhB5jIMQ&s" alt="Video 2" data-link="https://www.instagram.com/drinkoo.ads/reel/DPOjReYEnJe/?hl=en" />
+        <div class="video-info">
+          <div class="video-title">Script — Drinkoo</div>
+          <div class="video-desc">Short video script for Instagram ads.</div>
+          <div class="card-actions">
+            <span class="tag">Social Media</span>
+            <div class="ms-auto">
+              <a class="open-btn" href="https://www.instagram.com/drinkoo.ads/reel/DPOjReYEnJe/?hl=en" target="_blank" rel="noopener">View Video</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Add more as needed -->
+
+      <!-- Example video card -->
+      <div class="video-card">
+        <img class="thumb" src="https://png.pngtree.com/png-vector/20190215/ourmid/pngtree-play-video-icon-graphic-design-template-vector-png-image_530837.jpg" alt="Video 1" data-link="https://www.instagram.com/reel/C5qWUscvyfm/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" />
+        <div class="video-info">
+          <div class="video-title">Admin Tech</div>
+          <div class="video-desc">What saying Steve Jobs in interview?</div>
+          <div class="card-actions">
+            <span class="tag">Reel</span>
+            <div class="ms-auto">
+              <a class="open-btn" href="https://www.instagram.com/reel/C5qWUscvyfm/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank" rel="noopener">View Video</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Add more video cards here -->
+      <!-- 2 -->
+      <div class="video-card">
+        <img class="thumb" src="https://png.pngtree.com/png-vector/20190215/ourmid/pngtree-play-video-icon-graphic-design-template-vector-png-image_530837.jpg" alt="Video 2" data-link="https://www.youtube.com/shorts/8g5_Chn9PeM" />
+        <div class="video-info">
+          <div class="video-title">Time To Know</div>
+          <div class="video-desc">Short video</div>
+          <div class="card-actions">
+            <span class="tag">Youtube</span>
+            <div class="ms-auto">
+              <a class="open-btn" href="https://www.youtube.com/shorts/8g5_Chn9PeM" target="_blank" rel="noopener">View Video</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Add more video cards here -->
+
+<!-- 1 -->
+<div class="video-card">
+  <img class="thumb" src="https://png.pngtree.com/png-vector/20190215/ourmid/pngtree-play-video-icon-graphic-design-template-vector-png-image_530837.jpg" alt="Video 1" data-link="https://www.youtube.com/shorts/A7u8wE5lD18" />
+  <div class="video-info">
+    <div class="video-title">Time To Know</div>
+    <div class="video-desc">Short video</div>
+    <div class="card-actions">
+      <span class="tag">YouTube</span>
+      <div class="ms-auto">
+        <a class="open-btn" href="https://www.youtube.com/shorts/A7u8wE5lD18" target="_blank" rel="noopener">View Video</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 2 -->
+<div class="video-card">
+  <img class="thumb" src="https://png.pngtree.com/png-vector/20190215/ourmid/pngtree-play-video-icon-graphic-design-template-vector-png-image_530837.jpg" alt="Video 2" data-link="https://www.youtube.com/shorts/nd9G11hVon4" />
+  <div class="video-info">
+    <div class="video-title">Time To Know</div>
+    <div class="video-desc">Short video</div>
+    <div class="card-actions">
+      <span class="tag">YouTube</span>
+      <div class="ms-auto">
+        <a class="open-btn" href="https://www.youtube.com/shorts/nd9G11hVon4" target="_blank" rel="noopener">View Video</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 3 -->
+<div class="video-card">
+  <img class="thumb" src="https://png.pngtree.com/png-vector/20190215/ourmid/pngtree-play-video-icon-graphic-design-template-vector-png-image_530837.jpg" alt="Video 3" data-link="https://www.youtube.com/shorts/7Zce8NnYOM8" />
+  <div class="video-info">
+    <div class="video-title">Time To Know</div>
+    <div class="video-desc">Short video</div>
+    <div class="card-actions">
+      <span class="tag">YouTube</span>
+      <div class="ms-auto">
+        <a class="open-btn" href="https://www.youtube.com/shorts/7Zce8NnYOM8" target="_blank" rel="noopener">View Video</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 4 -->
+<div class="video-card">
+  <img class="thumb" src="https://png.pngtree.com/png-vector/20190215/ourmid/pngtree-play-video-icon-graphic-design-template-vector-png-image_530837.jpg" alt="Video 4" data-link="https://www.youtube.com/shorts/nW9yPEvj4ZA" />
+  <div class="video-info">
+    <div class="video-title">Time To Know</div>
+    <div class="video-desc">Short video</div>
+    <div class="card-actions">
+      <span class="tag">YouTube</span>
+      <div class="ms-auto">
+        <a class="open-btn" href="https://www.youtube.com/shorts/nW9yPEvj4ZA" target="_blank" rel="noopener">View Video</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 5 -->
+<div class="video-card">
+  <img class="thumb" src="https://png.pngtree.com/png-vector/20190215/ourmid/pngtree-play-video-icon-graphic-design-template-vector-png-image_530837.jpg" alt="Video 5" data-link="https://www.youtube.com/shorts/8mQRuADGeqg" />
+  <div class="video-info">
+    <div class="video-title">Time To Know</div>
+    <div class="video-desc">Short video</div>
+    <div class="card-actions">
+      <span class="tag">YouTube</span>
+      <div class="ms-auto">
+        <a class="open-btn" href="https://www.youtube.com/shorts/8mQRuADGeqg" target="_blank" rel="noopener">View Video</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 6 -->
+<div class="video-card">
+  <img class="thumb" src="https://png.pngtree.com/png-vector/20190215/ourmid/pngtree-play-video-icon-graphic-design-template-vector-png-image_530837.jpg" alt="Video 6" data-link="https://www.youtube.com/shorts/kQll_tmR8ZY" />
+  <div class="video-info">
+    <div class="video-title">Time To Know</div>
+    <div class="video-desc">Short video</div>
+    <div class="card-actions">
+      <span class="tag">YouTube</span>
+      <div class="ms-auto">
+        <a class="open-btn" href="https://www.youtube.com/shorts/kQll_tmR8ZY" target="_blank" rel="noopener">View Video</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 7 -->
+<div class="video-card">
+  <img class="thumb" src="https://png.pngtree.com/png-vector/20190215/ourmid/pngtree-play-video-icon-graphic-design-template-vector-png-image_530837.jpg" alt="Video 7" data-link="https://www.youtube.com/shorts/m0YpDno3UyY" />
+  <div class="video-info">
+    <div class="video-title">Time To Know</div>
+    <div class="video-desc">Short video</div>
+    <div class="card-actions">
+      <span class="tag">YouTube</span>
+      <div class="ms-auto">
+        <a class="open-btn" href="https://www.youtube.com/shorts/m0YpDno3UyY" target="_blank" rel="noopener">View Video</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 8 -->
+<div class="video-card">
+  <img class="thumb" src="https://png.pngtree.com/png-vector/20190215/ourmid/pngtree-play-video-icon-graphic-design-template-vector-png-image_530837.jpg" alt="Video 8" data-link="https://www.youtube.com/shorts/xCsp3S1L4lk" />
+  <div class="video-info">
+    <div class="video-title">Time To Know</div>
+    <div class="video-desc">Short video</div>
+    <div class="card-actions">
+      <span class="tag">YouTube</span>
+      <div class="ms-auto">
+        <a class="open-btn" href="https://www.youtube.com/shorts/xCsp3S1L4lk" target="_blank" rel="noopener">View Video</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 9 -->
+<div class="video-card">
+  <img class="thumb" src="https://png.pngtree.com/png-vector/20190215/ourmid/pngtree-play-video-icon-graphic-design-template-vector-png-image_530837.jpg" alt="Video 9" data-link="https://www.youtube.com/shorts/4caasufcCiM" />
+  <div class="video-info">
+    <div class="video-title">Time To Know</div>
+    <div class="video-desc">Short video</div>
+    <div class="card-actions">
+      <span class="tag">YouTube</span>
+      <div class="ms-auto">
+        <a class="open-btn" href="https://www.youtube.com/shorts/4caasufcCiM" target="_blank" rel="noopener">View Video</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Add more video cards here -->
+
+<!-- 1 -->
+<div class="video-card">
+  <img class="thumb" src="https://png.pngtree.com/png-vector/20190215/ourmid/pngtree-play-video-icon-graphic-design-template-vector-png-image_530837.jpg" alt="Akash Pal Singh Video 1" data-link="https://www.youtube.com/watch?v=hrlb7bfZSNA" />
+  <div class="video-info">
+    <div class="video-title">Akash Pal Singh</div>
+    <div class="video-desc">Short video</div>
+    <div class="card-actions">
+      <span class="tag">YouTube</span>
+      <div class="ms-auto">
+        <a class="open-btn" href="https://www.youtube.com/watch?v=hrlb7bfZSNA" target="_blank" rel="noopener">View Video</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 2 -->
+<div class="video-card">
+  <img class="thumb" src="https://png.pngtree.com/png-vector/20190215/ourmid/pngtree-play-video-icon-graphic-design-template-vector-png-image_530837.jpg" alt="Akash Pal Singh Video 2" data-link="https://www.youtube.com/watch?v=uY6eToX_4MQ" />
+  <div class="video-info">
+    <div class="video-title">Akash Pal Singh</div>
+    <div class="video-desc">Short video</div>
+    <div class="card-actions">
+      <span class="tag">YouTube</span>
+      <div class="ms-auto">
+        <a class="open-btn" href="https://www.youtube.com/watch?v=uY6eToX_4MQ" target="_blank" rel="noopener">View Video</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 3 -->
+<div class="video-card">
+  <img class="thumb" src="https://png.pngtree.com/png-vector/20190215/ourmid/pngtree-play-video-icon-graphic-design-template-vector-png-image_530837.jpg" alt="Akash Pal Singh Video 3" data-link="https://www.youtube.com/watch?v=-Wj05Wm0tfc" />
+  <div class="video-info">
+    <div class="video-title">Akash Pal Singh</div>
+    <div class="video-desc">Short video</div>
+    <div class="card-actions">
+      <span class="tag">YouTube</span>
+      <div class="ms-auto">
+        <a class="open-btn" href="https://www.youtube.com/watch?v=-Wj05Wm0tfc" target="_blank" rel="noopener">View Video</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+      <!-- Add more as needed -->
+
+    </div><!-- /gallery -->
+
+    <footer>
+      © 2025 Akash Pal Singh — Script Writing Portfolio
+    </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // Clicking thumbnail opens the link (data-link)
+    document.querySelectorAll('.thumb').forEach(img=>{
+      img.addEventListener('click', () => {
+        const url = img.getAttribute('data-link') || img.closest('.video-card')?.querySelector('.open-btn')?.href;
+        if(url) window.open(url, '_blank', 'noopener');
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edited Videos | Akash Pal Singh</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: #0a0a0a;
+      color: #fff;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    header {
+      background-color: #1A242F;
+      color: #fff;
+    }
+    .video-section {
+      margin: 50px 0;
+    }
+    .video-card {
+      background: #111;
+      border-radius: 12px;
+      padding: 15px;
+      text-align: center;
+      margin-bottom: 30px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .video-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 15px #00d1ff33;
+    }
+    .video-card iframe {
+      width: 100%;
+      border-radius: 12px;
+      border: none;
+    }
+    h1, h4 {
+      color: #00D1FF;
+    }
+    footer {
+      background: #1A242F;
+      text-align: center;
+      padding: 20px 0;
+      color: #aaa;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="py-4 text-center">
+    <h1>Edited Videos</h1>
+    <p>Watch My Professional Video Editing Projects</p>
+  </header>
+
+  <div class="container video-section">
+    <div class="row g-4" id="videoContainer"></div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Akash Pal Singh | All Rights Reserved</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    const container = document.getElementById('videoContainer');
+
+    const videos = [
+      "1TL5IC8ocb4O4N_utrkUTX9bUFqyDjZdx",
+      "1WV5Lc_5XsWC1KvrLISoUM3t8w80XlaHI",
+      "1ipcC8O11lp0A36Oix0VyV9iFYuOQUnCP",
+      "1YUvwsId3hkMS9x1E0E1UdA_tJ997vbxH",
+      "1iS9dq1iaZbLlHeKP1_uAm0Wbt1E2kxjT",
+      "1dh7VlAJyBeTvJeKKpl8DHugQpOmwZdEB",
+      "1ThrF8WxtAJ6ZrnsAbYWaP54MYV6Jn1Bj",
+      "1zKjaWpEvaR2FpVeKx4b_TiLc9RLFhLMF",
+      "11PoJs5n55NJTUAgQh3vLIbpCOyZ2lpQV",
+      "1oH7OB2DsXyBHWfoCIQ0EUEJGlKXKGvSm",
+      "1iWBuzCo7y0VRCwYEoxSCxzDHIyiaEtSh",
+      "1vUj0rht4Sm2PlWo0WkepyZoAmtwAowUv",
+      "1_XwshJUGk05I4K6Epohjm3RWFXaSh8uy",
+      "1CRxcbU3C0KwxfyE8zW7676nt-r9t8wuR",
+      "1CalBgKXpvj8Sz0oa9R2NMapIywKOLYYD",
+      "1szlZXtlr7N6Bbuvwlb1YfAaaQtP4nuUE",
+      "15vBEyIpNj3gBgNGqcD0BTugJrKrBj_lv",
+      "1ytb2eZkZ-AIbadvXgqwVPn_eABmvFsRt"
+    ];
+
+    videos.forEach((id, index) => {
+      container.innerHTML += `
+        <div class="col-md-6 col-lg-4">
+          <div class="video-card">
+            <h4>Promo Video ${index + 1}</h4>
+            <iframe 
+              src="https://drive.google.com/file/d/${id}/preview"
+              height="250"
+              allow="autoplay">
+            </iframe>
+          </div>
+        </div>
+      `;
+    });
+  </script>
+
+</body>
+</html>

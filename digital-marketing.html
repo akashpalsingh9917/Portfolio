@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Digital Marketing | Akash Pal Singh</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#0a0a0a;
+      --card:#111;
+      --accent:#00D1FF;
+      --muted:#ccc;
+      --header:#1A242F;
+    }
+    body{ background-color:var(--bg); color:#fff; font-family: 'Segoe UI', sans-serif; }
+    header{ background-color:var(--header); color:#fff; padding:32px 0; text-align:center; }
+    header h1{ margin:0; font-size:2rem; letter-spacing:0.4px; }
+
+    .container-main{ padding:40px 15px 80px; }
+
+    /* card styles */
+    .account-card{
+      background:var(--card);
+      border-radius:12px;
+      padding:12px;
+      transition:transform .25s, box-shadow .25s;
+      overflow:hidden;
+      height:100%;
+      display:flex;
+      flex-direction:column;
+    }
+    .account-card:hover{ transform:translateY(-6px); box-shadow:0 8px 30px rgba(0,0,0,0.6); }
+
+    .thumb{
+      width:100%;
+      aspect-ratio: 16 / 9;
+      object-fit:cover;
+      border-radius:8px;
+      cursor:pointer;
+      display:block;
+      border:2px solid transparent;
+    }
+    .account-info{ padding:12px 6px 0; flex:1; display:flex; flex-direction:column; }
+    .account-title{ font-weight:600; margin:0 0 6px; font-size:1.05rem; color:#fff; }
+    .account-desc{ color:var(--muted); font-size:.95rem; margin-bottom:12px; flex:1; }
+    .card-actions{ display:flex; gap:10px; align-items:center; }
+
+    .open-btn{
+      background:#007bff;border:none;padding:8px 14px;border-radius:8px;color:#fff;text-decoration:none;
+    }
+    .open-btn:hover{ background:#0056b3; color:#fff; }
+
+    .tag{ font-size:.82rem; padding:6px 8px; border-radius:999px; background:rgba(255,255,255,0.03); color:var(--muted); border:1px solid rgba(255,255,255,0.03); }
+
+    footer{ text-align:center; color:var(--muted); padding:40px 0 20px; }
+
+    @media(min-width:768px){
+      .grid-col{ display:grid; grid-template-columns:repeat(2,1fr); gap:18px; }
+    }
+    @media(min-width:992px){
+      .grid-col{ grid-template-columns:repeat(3,1fr); }
+    }
+    @media(min-width:1200px){
+      .grid-col{ grid-template-columns:repeat(4,1fr); }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Digital Marketing — Social Media Accounts</h1>
+  </header>
+
+  <div class="container container-main">
+    <!-- Social Media Grid -->
+    <div id="gallery" class="grid-col">
+
+      <!-- Example account card -->
+      <div class="account-card">
+        <img class="thumb" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7u2ytoIw_cvoEdDn9y82jDCWKI9VePoovj-c_S2d5c8Bc8kouDh-u0wnvHjELXaDm73w&usqp=CAU" alt="Instagram" data-link="https://www.instagram.com/drinkoo.ads/" />
+        <div class="account-info">
+          <div class="account-title">Drinkoo.ads</div>
+          <div class="account-desc">Main Instagram account showcasing campaigns and reels.</div>
+          <div class="card-actions">
+            <span class="tag">Instagram</span>
+            <div class="ms-auto">
+              <a class="open-btn" href="https://www.instagram.com/drinkoo.ads/" target="_blank" rel="noopener">Visit</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Example 2 -->
+      <div class="account-card">
+        <img class="thumb" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7u2ytoIw_cvoEdDn9y82jDCWKI9VePoovj-c_S2d5c8Bc8kouDh-u0wnvHjELXaDm73w&usqp=CAU" alt="Facebook" data-link="https://www.linkedin.com/company/drinkoo" />
+        <div class="account-info">
+          <div class="account-title">Drinkoo.ads</div>
+          <div class="account-desc">Official Linkedin page for marketing campaigns and updates.</div>
+          <div class="card-actions">
+            <span class="tag">Linkedin</span>
+            <div class="ms-auto">
+              <a class="open-btn" href="https://www.linkedin.com/company/drinkoo" target="_blank" rel="noopener">Visit</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Example account card -->
+      <div class="account-card">
+        <img class="thumb" src="https://media.telanganatoday.com/wp-content/uploads/2021/05/Instagram-will-soon-let-users-post-from-its-website.jpg" alt="Instagram" data-link="https://www.instagram.com/thinkinnnofu/" />
+        <div class="account-info">
+          <div class="account-title">thinkinnnofu</div>
+          <div class="account-desc">Main Instagram account showcasings reels.</div>
+          <div class="card-actions">
+            <span class="tag">Instagram</span>
+            <div class="ms-auto">
+              <a class="open-btn" href="https://www.instagram.com/thinkinnnofu" target="_blank" rel="noopener">Visit</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Example 2 -->
+      <div class="account-card">
+        <img class="thumb" src="https://yt3.googleusercontent.com/vp_1RXVhG9Lx6oqaOTgBqeBOXcr4pwLrUpnwhg1CEFkxcYl_NB0I9k4J6Hhy7vA62JDkve6q=s900-c-k-c0x00ffffff-no-rj" alt="Facebook" data-link="https://www.instagram.com/younity.in" />
+        <div class="account-info">
+          <div class="account-title">Younity</div>
+          <div class="account-desc">Official Instagram page.</div>
+          <div class="card-actions">
+            <span class="tag">Instagram</span>
+            <div class="ms-auto">
+              <a class="open-btn" href="https://www.instagram.com/younity.in" target="_blank" rel="noopener">Visit</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Example account card -->
+      <div class="account-card">
+        <img class="thumb" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzU5m5sz77sioSpda8iSBxWmySAiKePqTFmQ&s" alt="Instagram" data-link="https://www.instagram.com/kavidheerendrasingh" />
+        <div class="account-info">
+          <div class="account-title">Dhirendra Singh</div>
+          <div class="account-desc">Instagram Personal Brand account.</div>
+          <div class="card-actions">
+            <span class="tag">Instagram</span>
+            <div class="ms-auto">
+              <a class="open-btn" href="https://www.instagram.com/kavidheerendrasingh" target="_blank" rel="noopener">Visit</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Example 2 -->
+      <div class="account-card">
+        <img class="thumb" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQz2MpX9y3HruH9t-XhXm2rfeCuK7lleZwVtA&s" alt="Facebook" data-link="https://www.instagram.com/realtoryadav" />
+        <div class="account-info">
+          <div class="account-title">Realtor Yadav</div>
+          <div class="account-desc">Official page for marketing campaigns and updates.</div>
+          <div class="card-actions">
+            <span class="tag">Instagram</span>
+            <div class="ms-auto">
+              <a class="open-btn" href="https://www.instagram.com/realtoryadav" target="_blank" rel="noopener">Visit</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Example account card -->
+      <div class="account-card">
+        <img class="thumb" src="https://play-lh.googleusercontent.com/8iJ0Rp1MA1uO1MHkp2mFYjMCBG95aBe3zxLjuKaPeJRsmCoNi2mQEaAEiU3DKwCqUV4" alt="Instagram" data-link="https://www.instagram.com/codefobe" />
+        <div class="account-info">
+          <div class="account-title">CodeFobe</div>
+          <div class="account-desc">Main Instagram account showcasing campaigns and reels.</div>
+          <div class="card-actions">
+            <span class="tag">Instagram</span>
+            <div class="ms-auto">
+              <a class="open-btn" href="https://www.instagram.com/codefobe" target="_blank" rel="noopener">Visit</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Example 2 -->
+      <div class="account-card">
+        <img class="thumb" src="https://media.licdn.com/dms/image/v2/D560BAQELmhd0CNCcxQ/company-logo_200_200/B56ZXb8JhSGQAI-/0/1743151737164/brandbikega_com_logo?e=2147483647&v=beta&t=MvSllgi_th3e20-NVx21U3Be3Eo513RlrfqIa_GfXQw" alt="Facebook" data-link="https://www.instagram.com/brandbikegaofficial" />
+        <div class="account-info">
+          <div class="account-title">Brand Bikega</div>
+          <div class="account-desc">Official page for marketing campaigns and updates.</div>
+          <div class="card-actions">
+            <span class="tag">Instagram</span>
+            <div class="ms-auto">
+              <a class="open-btn" href="https://www.instagram.com/brandbikegaofficial" target="_blank" rel="noopener">Visit</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+       <!-- Example 2 -->
+      <div class="account-card">
+        <img class="thumb" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlcBa0BTb8GGB5J8DK5r0a1QBZtA95YK-ONg&s" alt="Facebook" data-link="https://www.instagram.com/newsblaremedia" />
+        <div class="account-info">
+          <div class="account-title">NewsBlare Media</div>
+          <div class="account-desc">Official page.</div>
+          <div class="card-actions">
+            <span class="tag">Instagram</span>
+            <div class="ms-auto">
+              <a class="open-btn" href="https://www.instagram.com/newsblaremedia" target="_blank" rel="noopener">Visit</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+       <!-- Example 2 -->
+      <div class="account-card">
+        <img class="thumb" src="https://www.hud.ac.uk/media/assets/photo/news/2024/may/Artificial-Intelligence-stock-image.jpg" alt="Facebook" data-link="https://www.instagram.com/aimarketingpartners" />
+        <div class="account-info">
+          <div class="account-title">AI Marketing Partners</div>
+          <div class="account-desc">Official page for marketing campaigns and updates.</div>
+          <div class="card-actions">
+            <span class="tag">Instagram</span>
+            <div class="ms-auto">
+              <a class="open-btn" href="https://www.instagram.com/aimarketingpartners" target="_blank" rel="noopener">Visit</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+       <!-- Example 2 -->
+      <div class="account-card">
+        <img class="thumb" src="https://reelrishimedia.com/wp-content/uploads/2025/04/Untitled-design-1-1024x1024.png" alt="Facebook" data-link="https://www.instagram.com/reelrishimedia" />
+        <div class="account-info">
+          <div class="account-title">Reel Rishi Media</div>
+          <div class="account-desc">Official page.</div>
+          <div class="card-actions">
+            <span class="tag">Instagram</span>
+            <div class="ms-auto">
+              <a class="open-btn" href="https://www.instagram.com/reelrishimedia" target="_blank" rel="noopener">Visit</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Example 2 -->
+      <div class="account-card">
+        <img class="thumb" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsXMPaRUPwfmRx-8Cd7XRkHLgnCIYojdqfQA&s" alt="Facebook" data-link="https://www.instagram.com/resting.rides" />
+        <div class="account-info">
+          <div class="account-title">Resting Rides</div>
+          <div class="account-desc">Official page.</div>
+          <div class="card-actions">
+            <span class="tag">Instagram</span>
+            <div class="ms-auto">
+              <a class="open-btn" href="https://www.instagram.com/resting.rides" target="_blank" rel="noopener">Visit</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Add more account cards as needed -->
+
+    </div><!-- /gallery -->
+
+    <footer>
+      © 2025 Akash Pal Singh — Digital Marketing Portfolio
+    </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // Clicking thumbnail opens the link (data-link)
+    document.querySelectorAll('.thumb').forEach(img=>{
+      img.addEventListener('click', () => {
+        const url = img.getAttribute('data-link') || img.closest('.account-card')?.querySelector('.open-btn')?.href;
+        if(url) window.open(url, '_blank', 'noopener');
+      });
+    });
+  </script>
+</body>
+</html>
